@@ -1,0 +1,53 @@
+table {
+    display: flex;
+    justify-content: center;
+}
+
+#red {
+    background-color: red;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#indigo {
+    background-color: indigo;
+}
+
+#violet {
+    background-color: violet;
+}
+
+.color-table {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 3px solid lightgray;
+}
