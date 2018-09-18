@@ -3,6 +3,11 @@ table {
     justify-content: center;
 }
 
+button {
+    display: flex;
+    justify-content: center;
+}
+
 #red {
     background-color: red;
 }
