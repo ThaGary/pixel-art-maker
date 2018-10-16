@@ -4,7 +4,7 @@ var selection = document.querySelectorAll('.dot')
 var btn = document.querySelector('button')
 // color selector
 for (var i = 0; i < selection.length; i++) {
-    selection[i].addEventListener("click", selector)
+    selection[i].addEventListener('click', selector)
 }
 // color selector function
 function selector(event) {
