@@ -1,30 +1,33 @@
-// variables
-var boxes = document.querySelectorAll('td')
-var selection = document.querySelectorAll('.dot')
-var btn = document.querySelector('button')
-// color selector
-for (var i = 0; i < selection.length; i++) {
-    selection[i].addEventListener('click', selector)
-}
-// color selector function
-function selector(event) {
-    for (var i = 0; i < selection.length; i++) {
-        selection[i].style.border = '3px solid lightgray'
+function createPixels (numberofpixels){
+    var mainCanvas = document.getElementById('canvas')
+    for (var i = 0; i < numberofpixels; i++){
+        let newPixel = document.createElement('div')
+        newPixel.className = 'pixel'
+        mainCanvas.appendChild(newPixel)
     }
-    event.target.style.border = '3px solid black'
-    color = event.target.id
 }
-// box selection
-for (var i = 0; i < boxes.length; i++) {
-    boxes[i].addEventListener('click', colorchange)
+createPixels(3136)
+
+var boxes = document.querySelectorAll('.pixel')
+var selection = document.querySelectorAll('.color')
+var btn = document.querySelector('button')
+
+function updateInput(color){
+    document.getElementById("colorChoice").value = color;
+    for (var i = 0; i < boxes.length; i++) {
+        boxes[i].addEventListener('click', colorchange)
+    }
+    
+    function colorchange(event) {
+        event.target.style.backgroundColor = color
+    }
 }
-// box color changer
-function colorchange(event) {
-    event.target.style.backgroundColor = color
-}
-// clear eventlistener
+
+
+
 btn.addEventListener('click', clear)
 // clear function
 function clear() {
     window.location.reload()
 }
+
